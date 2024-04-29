@@ -124,7 +124,8 @@ def user_signup(request):
                 user = User.objects.create_user(username, email, password)
                 user.save()
                 login(request, user)
-                return redirect('/')
+                #return redirect('/')
+                return render(request, 'index.html')
             except:
                 error_message = "Error creating account"
                 return render(request, 'signup.html', {'error_message': error_message})
