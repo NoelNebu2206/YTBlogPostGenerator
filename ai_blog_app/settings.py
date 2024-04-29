@@ -35,7 +35,7 @@ CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = ['https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["6e4epi1h4m.execute-api.us-west-2.amazonaws.com"]
 
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
