@@ -27,13 +27,14 @@ SECRET_KEY = "django-insecure-*+(2mzuy3qk8@fk6=02qs$=8)j-5elcotq4xz_b-#-p6v+a)7s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
-
 #Adding the below settings to secure the app and avoid csrf failures
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ['http://6e4epi1h4m.execute-api.us-west-2.amazonaws.com','https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com','http://*.6e4epi1h4m.execute-api.us-west-2.amazonaws.com','https://*.6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
+
+
+ALLOWED_HOSTS = ["*"]
 
 
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
