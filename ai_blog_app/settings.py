@@ -29,10 +29,11 @@ DEBUG = True
 
 #Adding the below settings to secure the app and avoid csrf failures
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 #CSRF_TRUSTED_ORIGINS = ['https://*.6e4epi1h4m.execute-api.us-west-2.amazonaws.com','https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com','http://*.6e4epi1h4m.execute-api.us-west-2.amazonaws.com', 'http://6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
 CSRF_TRUSTED_ORIGINS = ['https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
+
 
 ALLOWED_HOSTS = ["*"]
 

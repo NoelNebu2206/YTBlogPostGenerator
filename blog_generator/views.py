@@ -113,10 +113,10 @@ def user_login(request):
 
 def user_signup(request):
     if request.method == 'POST':
+        print(request.POST)
         username= request.POST['username']
         password= request.POST['password']
         email= request.POST['email']
-        password= request.POST['password']
         repeatPassword= request.POST['repeatPassword']
 
         if password == repeatPassword:
@@ -124,8 +124,8 @@ def user_signup(request):
                 user = User.objects.create_user(username, email, password)
                 user.save()
                 login(request, user)
-                #return redirect('/')
-                return render(request, 'index.html')
+                return redirect('/')
+                #return render(request, 'index.html')
             except:
                 error_message = "Error creating account"
                 return render(request, 'signup.html', {'error_message': error_message})
