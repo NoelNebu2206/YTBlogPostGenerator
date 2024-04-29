@@ -27,7 +27,8 @@ SECRET_KEY = "django-insecure-*+(2mzuy3qk8@fk6=02qs$=8)j-5elcotq4xz_b-#-p6v+a)7s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
+CSRF_TRUSTED_ORIGINS = ['https://6e4epi1h4m.execute-api.us-west-2.amazonaws.com']
 
 
 # Application definition
