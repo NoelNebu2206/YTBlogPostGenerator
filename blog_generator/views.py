@@ -112,8 +112,8 @@ def user_login(request):
     return render(request, 'login.html')
 
 def user_signup(request):
+    print("Request contents", request.POST)
     if request.method == 'POST':
-        print(request.POST)
         username= request.POST['username']
         password= request.POST['password']
         email= request.POST['email']
